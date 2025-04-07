@@ -4,28 +4,25 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Ali El Mansouri Bachaou | Portafolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;600&display=swap" rel="stylesheet">
   <style>
+    * { box-sizing: border-box; }
     body {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #111;
+      font-family: 'Outfit', sans-serif;
+      background: linear-gradient(to right, #0f0f0f, #1c1c1c);
       color: #eee;
       scroll-behavior: smooth;
-    }
-    header, section {
-      padding: 60px 20px;
-      max-width: 900px;
-      margin: auto;
     }
     nav {
       position: fixed;
       top: 0;
       width: 100%;
-      background-color: #111;
-      border-bottom: 1px solid #222;
+      background-color: rgba(15, 15, 15, 0.95);
+      border-bottom: 1px solid #333;
       display: flex;
       justify-content: center;
-      gap: 30px;
+      gap: 40px;
       padding: 15px 0;
       z-index: 1000;
     }
@@ -33,30 +30,84 @@
       color: #eee;
       text-decoration: none;
       font-weight: bold;
+      transition: color 0.3s ease;
     }
-    nav a:hover {
-      color: #00ffff;
+    nav a:hover { color: #00ffff; }
+
+    header, section {
+      padding: 100px 20px 60px;
+      max-width: 1000px;
+      margin: auto;
     }
+
     h1, h2 {
       color: #00ffff;
     }
+
     .project {
-      background-color: #1a1a1a;
+      background: rgba(255, 255, 255, 0.05);
       border: 1px solid #333;
-      border-radius: 8px;
+      border-radius: 12px;
       padding: 20px;
-      margin-bottom: 30px;
+      margin-bottom: 40px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease;
     }
+    .project:hover { transform: scale(1.02); }
+    .project img {
+        width: 90%;
+        max-width: 600px;
+        height: auto;
+        display: block;
+        margin: 0 auto 20px auto;
+        border-radius: 10px;
+        border: 1px solid #333;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+        object-fit: cover;
+    }
+
+
+    .btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 20px;
+      background: #00ffff;
+      color: #111;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+    .btn:hover { background: #00cccc; }
+
     .contact-links a {
       display: inline-block;
-      margin-right: 15px;
+      margin: 10px 15px 0 0;
       color: #00ffff;
       text-decoration: none;
+      font-weight: bold;
     }
+
+    .tech-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .tech-grid div {
+      background-color: #1a1a1a;
+      border: 1px solid #333;
+      padding: 10px;
+      border-radius: 6px;
+      text-align: center;
+    }
+
     footer {
       text-align: center;
       padding: 40px 20px;
-      color: #555;
+      color: #777;
     }
   </style>
 </head>
@@ -65,45 +116,70 @@
   <nav>
     <a href="#inicio">Inicio</a>
     <a href="#sobremi">Sobre mí</a>
+    <a href="#tecnologias">Tecnologías</a>
     <a href="#proyectos">Proyectos</a>
     <a href="#contacto">Contacto</a>
   </nav>
 
   <header id="inicio">
     <h1>Ali El Mansouri Bachaou</h1>
-    <p>Desarrollador web full-stack con experiencia en sistemas y automatización.</p>
+    <p>Desarrollador web full-stack con base sólida en sistemas, automatización y soluciones IT integrales.</p>
   </header>
 
   <section id="sobremi">
     <h2>Sobre mí</h2>
-    <p>Soy técnico en Administración de Sistemas Informáticos en Red (ASIR) y actualmente curso Desarrollo de Aplicaciones Web (DAW). Me apasiona unir el mundo del desarrollo con los sistemas para crear soluciones completas, eficientes y funcionales. Experiencia en Python, PHP, JS, Bash, PowerShell, y administración de sistemas Linux y Windows.</p>
+    <p>Soy técnico en Administración de Sistemas Informáticos en Red (ASIR) y actualmente curso Desarrollo de Aplicaciones Web (DAW). Me gusta unir el mundo del desarrollo con los sistemas para construir herramientas útiles, seguras y eficientes.</p>
+    <p>Busco crecer como profesional creando soluciones completas, estables y funcionales, tanto en el lado cliente como en el servidor.</p>
+  </section>
+
+  <section id="tecnologias">
+    <h2>Tecnologías que uso</h2>
+    <div class="tech-grid">
+      <div>HTML5</div>
+      <div>CSS3</div>
+      <div>JavaScript</div>
+      <div>PHP</div>
+      <div>MySQL</div>
+      <div>Python</div>
+      <div>Git</div>
+      <div>Linux</div>
+      <div>Windows Server</div>
+      <div>Bash</div>
+      <div>PowerShell</div>
+      <div>VirtualBox / VMware</div>
+      <div>Redes</div>
+      <div>Seguridad IT</div>
+    </div>
   </section>
 
   <section id="proyectos">
-    <h2>Proyectos</h2>
+    <h2>Proyectos destacados</h2>
 
     <div class="project">
-      <h3>ASIRTOOLS</h3>
-      <p>Herramienta de automatización creada con interfaz gráfica en Python. Usa scripts en PowerShell para Windows y Bash para Linux, permitiendo instalar y actualizar múltiples herramientas de forma rápida y amigable para técnicos.</p>
-      <p><strong>Tecnologías:</strong> Python, PowerShell, Bash</p>
-      <p><a href="https://github.com/Ali-El-Mansouri/ASIRTOOLS">[Ver en GitHub]</a></p>
-    </div>
-
-    <div class="project">
-      <h3>Gestor de Servidores y Clientes</h3>
-      <p>Aplicación web que permite controlar servidores, clientes, hostings y dominios de forma completa. Incluye panel de administrador, funcionalidades CRUD, y control total del flujo de servicios ofrecidos a empresas.</p>
-      <p><strong>Tecnologías:</strong> PHP puro, HTML, CSS, JavaScript</p>
-      <p></p>
-    </div>
+        <img src="https://raw.githubusercontent.com/Ali-El-Mansouri/ASIRTOOLS/refs/heads/main/logos/icono.ico" alt="ASIRTOOLS">
+        <h3>ASIRTOOLS</h3>
+        <p>Herramienta de automatización con interfaz gráfica en Python. Usa scripts en PowerShell para Windows y Bash para Linux, facilitando la instalación y actualización de herramientas para técnicos IT.</p>
+        <p><strong>Tecnologías:</strong> Python, PowerShell, Bash</p>
+        <a class="btn" href="https://github.com/Ali-El-Mansouri/ASIRTOOLS" target="_blank">Ver en GitHub</a>
+      </div>
+      
+      <div class="project">
+        <img src="https://zierzo.es/wp-content/uploads/2015/07/Backups-o-copias-de-seguridad.jpg" alt="Gestor de Servidores y Clientes">
+        <h3>Gestor de Servidores y Clientes</h3>
+        <p>Aplicación web que gestiona servidores, clientes, dominios y hostings ofrecidos a empresas. Incluye panel de administrador funcional con operaciones CRUD y control total del sistema.</p>
+        <p><strong>Tecnologías:</strong> PHP, HTML, CSS, JavaScript</p>
+      </div>
+      
+      
 
   </section>
 
   <section id="contacto">
     <h2>Contacto</h2>
-    <p>¿Quieres ponerte en contacto? Puedes encontrarme en:</p>
+    <p>¿Quieres colaborar o saber más? Aquí puedes encontrarme:</p>
     <div class="contact-links">
-      <a href="https://www.linkedin.com/in/ali-el-mansouri-bachaou-47056428b/">LinkedIn</a>
-      <a href="https://github.com/Ali-El-Mansouri">GitHub</a>
+      <a href="https://www.linkedin.com/in/ali-el-mansouri-bachaou-47056428b/" target="_blank">LinkedIn</a>
+      <a href="https://github.com/Ali-El-Mansouri" target="_blank">GitHub</a>
       <a href="mailto:alielmansouri2306@gmail.com">Email</a>
     </div>
   </section>
